@@ -83,11 +83,27 @@ Ser la plataforma líder en orientación vocacional digital en Colombia, conecta
 
 ---
 
+## 📚 Documentación del Proyecto
+
+> Toda la documentación de gestión, planificación y seguimiento del proyecto está disponible públicamente en Notion.
+
+### 📖 MIAcademia Docs
+[https://miacademia.notion.site/MIAcademia-Docs](https://miacademia.notion.site/MIAcademia-Docs-2b9cc1d899d580bbb225ee096bcda1c7)
+
+En la documentación encontrarás:
+
+- 📋 **Gestión del proyecto** - Épicas, historias de usuario y tareas
+- 📝 **Especificaciones técnicas** - Decisiones de arquitectura y diseño
+- 💡 **Ideas** - Funcionalidades futuras planificadas
+
+---
+
 ## ⚠️ Repositorio Complementario (Obligatorio)
 
 > **IMPORTANTE:** Este proyecto requiere un repositorio adicional para su correcto funcionamiento.
 
-### 📦 [MIAcademia-Data](https://github.com/Sebas-Ar/MIAcademia-data)
+### 📦 MIAcademia-Data
+[https://github.com/Sebas-Ar/MIAcademia-data](https://github.com/Sebas-Ar/MIAcademia-data)
 
 El repositorio **MIAcademia-Data** es el core de generación y análisis de datos de la plataforma. Contiene todos los scripts y utilidades necesarios para:
 
