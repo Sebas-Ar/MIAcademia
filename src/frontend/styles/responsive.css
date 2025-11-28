@@ -1,0 +1,3 @@
+.page {
+    font-size: clamp(8px, 2.8vw, 15px);
+}

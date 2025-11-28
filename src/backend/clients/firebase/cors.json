@@ -1,0 +1,8 @@
+[
+    {
+      "origin": ["http://localhost:3000", "https://miacademia.ai", "https://www.miacademia.ai"],
+      "method": ["GET"],
+      "maxAgeSeconds": 3600,
+      "responseHeader": ["Content-Type"]
+    }
+  ]

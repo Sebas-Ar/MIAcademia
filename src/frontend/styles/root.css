@@ -1,0 +1,68 @@
+:root {
+    --yellow: #FFC900;
+    --dark-yellow: #D8A503;
+    --light-yellow: rgb(255, 217, 79);
+    --transparent-yellow: #ffc80033;
+    --transparent-dark-yellow: #474217;
+
+    --blue: #3A4E8D;
+    --dark-blue: #0F1A20;
+    --light-blue:rgb(239, 243, 255);
+    --transparent-dark-blue: #0F1A2030;
+    --transparent-blue: #3A4E8D55;
+
+    --gray: #dedede;
+    --light-gray: #EFEFEF;
+    --dark-gray: #767676;
+    --transparent-gray: #76767633;
+    --transparent-dark-gray:rgba(32, 32, 32, 0.44);
+    --medium-gray:rgb(72, 79, 101);
+
+    --green: #1b8640;
+    --light-green: #F2F7F2;
+    --transparent-green: #1b86403d;
+
+    --white: #FFFFFF;
+    --transparent-white: #ffffff25;
+    
+    --black: #000000;
+
+    --red: #dc2626;
+    --transparent-red: #80141450;
+
+
+
+}
+
+body {
+    color: var(--dark-blue);
+}  
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--light-gray);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--dark-blue)
+                        var(--light-gray);
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    outline: none;
+}

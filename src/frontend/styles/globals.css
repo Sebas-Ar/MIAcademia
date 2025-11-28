@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 30rem;
+}
+
+.markdown {
+  view-transition-name: chat-response;
+}
+
+.markdown p {
+  margin-bottom: 1em;
+}
+
+.markdown strong, .description strong {
+  font-weight: 600;
+}
+
+.markdown .program-list {
+  display: grid;
+  justify-content: start;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.markdown .program-wrapper {
+  position: relative;
+}
+
+.markdown .program {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  cursor: pointer;
+  transition: background .3s;
+  text-align: left;
+  width: 100%;
+  color: var(--dark-blue);
+}
+
+.markdown .program:hover .program-info::before {
+  border-color: transparent var(--gray) transparent transparent;
+}
+
+.markdown .program .program-info {
+  border-radius: 0 1em 1em 0;
+  padding: 1em 3.5em 2.5em 1.5em;
+  background-color: var(--light-gray);
+  grid-column: 2/3;
+  grid-row: 1/2;
+  position: relative;
+  transition: background .3s;
+  border-top: .2em solid var(--yellow);
+  /* border-right: .2em solid var(--yellow);
+  border-bottom: .2em solid var(--yellow); */
+}
+
+.markdown .program:hover .program-info {
+  background-color: var(--gray);
+}
+
+.markdown .program:active .program-info {
+  background-color: var(--yellow);
+}
+
+.markdown .ver {
+  position: absolute;
+  background: var(--light-gray);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 1em 0;
+  padding: 6em 0 1em;
+  text-align: center;
+  mask-image: linear-gradient(transparent 5%, #0009 30%, black 75%); 
+  text-transform: uppercase;
+  font-size: .9em;
+  font-weight: 700;
+  transition: background .3s, font-size .3s;
+}
+
+.markdown .program:hover .ver {
+  background-color: var(--gray);
+  font-size: 1em;
+}
+
+.markdown .program:active .ver {
+  background-color: var(--yellow);
+}
+
+.markdown .program .program-info::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: .7em .7em .7em 0;
+  transform: translate(-.6em);
+  border-color: transparent var(--light-gray) transparent transparent;
+  left: 0;
+  top: 1.5em;
+  transition: border .3s;
+}
+
+.markdown .program:active .program-info:before {
+  border-color: transparent var(--yellow) transparent transparent;
+}
+
+.markdown > p:nth-child(1) {
+  padding-left: 40px;
+}
+
+.markdown .favorite-btn-program-chat {
+  z-index: 1;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.markdown h2 {
+  font-weight: 700;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+
+.markdown .program h3 {
+  margin-bottom: .5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.markdown .program ul {
+  padding-left: 2em;
+}
+
+
+.markdown .program li {
+  position: relative;
+}
+
+.markdown .program {
+  max-width: 41em;
+}
+
+.markdown .program > ul > li {
+  position: relative;
+  margin-left: 1.5em;
+}
+
+.markdown .program-info li::before {
+  content: "";
+  position: absolute;
+  height: .4em;
+  width: .4em;
+  background-color: var(--dark-blue);
+  top: .6em;
+  left: -1em;
+  border-radius: 50%;
+}
+
+.markdown .program-info li:last-child span {
+  font-weight: 500;
+}
+
+.markdown .program > img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 5em;
+  padding-top: .5em;
+  padding-right: 1em;
+  transition: transform .3s;
+}
+
+.markdown .program:hover img {
+  transform: scale(1.1);
+}
+
+.green {
+  color: var(--green);
+}
+
+.gray {
+  color: var(--dark-gray);
+}
+
+@media (width <= 450px) {
+  .program .program-info::before {
+    transform: translate(-.6em) rotate(90deg);
+    top: unset;
+    left: 2.75em;
+    bottom: calc(100% - .4em);
+  }
+
+  .program .program-info {
+    border-radius: 0 0 1em 1em;
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  .program img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 5em;
+    padding: .5em .5em 1em;
+  }
+}
+
+.wrapper-slide a {
+  display: block;
+}
+
+.wrapper-item .content strong {
+  font-weight: 700;
+}
+
+.load-more-btn-wrapper {
+  display: grid;
+  justify-content: center;
+  padding-left: 5em;
+}
+
+.load-more-programs-btn {
+  border: .2em solid var(--yellow);
+  border-radius: 3em;
+  padding: .5em 2em;
+  transition: background .3s;
+  font-weight: 600;
+}
+
+.load-more-programs-btn:hover {
+  background: var(--yellow);
+}

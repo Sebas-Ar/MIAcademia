@@ -1,0 +1,172 @@
+/* Animaciones globales para componentes */
+/* Nomenclatura: @keyframes [nombre]-[componente] */
+/* Después de la migración completa, se unificarán las animaciones similares */
+
+/* ProgramVariantsToggle - Animación de escala pulsante para el botón toggle */
+@keyframes scale-programVariantsToggle {
+    from {
+        transform: scale(0.99);
+    }
+    to {
+        transform: scale(1.02);
+    }
+}
+
+/* ProgramVariantsToggle - Animación de deslizamiento hacia abajo para el dropdown */
+@keyframes slideDown-programVariantsToggle {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ProgramItem - Animación de escala para el ícono de información */
+@keyframes scaleAnimate-programItem {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* Cat - Animación de parpadeo de ojos */
+@keyframes eyeBlink-cat {
+    0% {
+        background-size: 100% 0%, 0.5em 0.5em;
+        background-position: top, 50% 50%;
+    }
+    26% {
+        background-size: 100% 40%, 0.5em 0.5em;
+        background-position: top, 50% 70%;
+    }
+    30%, 44% {
+        background-size: 100% 0%, 0.5em 0.5em;
+        background-position: top, 50% 50%;
+    }
+    50% {
+        background-size: 100% 0%, 0.5em 0.5em;
+        background-position: top, 50% 50%;
+    }
+    80% {
+        background-size: 100% 70%, 0.5em 0.5em;
+        background-position: top, 50% 70%;
+    }
+    84%, 100% {
+        background-size: 100% 0%, 0.5em 0.5em;
+        background-position: top, 50% 50%;
+    }
+}
+
+/* Cat - Animación de escala del cuerpo del gato */
+@keyframes catScale-cat {
+    0% {
+        transform: scale(1.0);
+    }
+    26% {
+        transform: scale(1.05);
+    }
+    30%, 44% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    80% {
+        transform: scale(1.03);
+    }
+    84%, 100% {
+        transform: scale(1.0);
+    }
+}
+
+/* Cat - Animación de rotación de oreja izquierda */
+@keyframes rotateLeft-cat {
+    0% {
+        transform: rotate(-32deg);
+    }
+    26% {
+        transform: rotate(-38deg);
+    }
+    30%, 44% {
+        transform: rotate(-32deg);
+    }
+    50% {
+        transform: rotate(-32deg);
+    }
+    80% {
+        transform: rotate(-42deg);
+    }
+    84%, 100% {
+        transform: rotate(-32deg);
+    }
+}
+
+/* Cat - Animación de rotación de oreja derecha */
+@keyframes rotateRight-cat {
+    0% {
+        transform: rotate(32deg);
+    }
+    26% {
+        transform: rotate(38deg);
+    }
+    30%, 44% {
+        transform: rotate(32deg);
+    }
+    50% {
+        transform: rotate(32deg);
+    }
+    80% {
+        transform: rotate(42deg);
+    }
+    84%, 100% {
+        transform: rotate(32deg);
+    }
+}
+
+/* Cat - Estilos para los ojos */
+.eyes-decoration::before,
+.eyes-decoration::after {
+    content: "";
+    height: 0.95em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+        linear-gradient(var(--dark-blue) 0 0) top/100% 0% no-repeat,
+        radial-gradient(farthest-side, var(--dark-blue) 80%, #0000) 50% / 0.5em 0.5em no-repeat #fff;
+    animation: eyeBlink-cat 8s infinite linear;
+}
+
+/* Cat - Aplicar animaciones */
+.cat-decoration {
+    animation: catScale-cat 8s infinite linear;
+}
+
+.ear-left-decoration {
+    animation: rotateLeft-cat 8s infinite linear;
+}
+
+.ear-right-decoration {
+    animation: rotateRight-cat 8s infinite linear;
+}
+
+/* Cat - Detener animaciones en hover */
+.cat-wrapper-decoration:hover .eyes-decoration::before,
+.cat-wrapper-decoration:hover .eyes-decoration::after,
+.cat-wrapper-decoration:hover .cat-decoration {
+    animation: unset;
+}
+
+.cat-wrapper-decoration:hover .ear-left-decoration {
+    transform: rotate(-20deg);
+    animation: unset;
+}
+
+.cat-wrapper-decoration:hover .ear-right-decoration {
+    transform: rotate(20deg);
+    animation: unset;
+}
