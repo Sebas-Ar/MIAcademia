@@ -81,6 +81,34 @@ Ser la plataforma líder en orientación vocacional digital en Colombia, conecta
 - **Información actualizada** de admisiones y requisitos
 - **Logos y recursos visuales** de todas las instituciones
 
+---
+
+## ⚠️ Repositorio Complementario (Obligatorio)
+
+> **IMPORTANTE:** Este proyecto requiere un repositorio adicional para su correcto funcionamiento.
+
+### 📦 [MIAcademia-Data](https://github.com/Sebas-Ar/MIAcademia-data)
+
+El repositorio **MIAcademia-Data** es el core de generación y análisis de datos de la plataforma. Contiene todos los scripts y utilidades necesarios para:
+
+- 📊 **Procesamiento de datos del SNIES** - Extracción y transformación de información educativa oficial
+- ✍️ **Generación de descripciones** - Creación automática de descripciones de programas con OpenAI
+- 🗺️ **Geolocalización** - Obtención de coordenadas de instituciones con Google Maps API
+- 🗄️ **Actualización de BD** - Scripts para poblar y mantener la base de datos en Turso
+- 🖼️ **Gestión de recursos** - Carga de logos e imágenes a Firebase Storage
+- 🌐 **SEO** - Generación de sitemaps XML
+
+```bash
+# Clonar el repositorio de datos
+git clone https://github.com/Sebas-Ar/MIAcademia-data.git
+
+# Seguir las instrucciones de instalación en su README
+```
+
+**Sin este repositorio, MIAcademia no tendrá acceso a los datos educativos necesarios para funcionar correctamente.**
+
+---
+
 ## 🏗️ Arquitectura
 
 ### Frontend (React/Next.js)
@@ -377,7 +405,7 @@ const AI_PROVIDERS = {
 
 - **Chat Conversacional**: Respuestas contextuales sobre programas académicos
 - **Análisis de Perfil**: Evaluación de compatibilidad vocacional
-- **Recomendaciones Inteligentes**: Sugerencias basadas en historial
+- **Recomendaciones Inteligentes**: Sugerencias basadas en historial (en desarrollo)
 - **Generación de Contenido**: Descripciones automáticas de programas
 
 ## 💳 Integración de Pagos
@@ -509,81 +537,6 @@ const authOptions = {
 }
 ```
 
-### Roles y Permisos
-
-- **Usuario**: Acceso básico a la plataforma
-- **Premium**: Funciones avanzadas y asesorías
-- **Admin**: Panel de administración completo
-- **Moderador**: Gestión de contenido y soporte
-
-## 🧪 Testing
-
-```bash
-# Ejecutar tests unitarios
-bun test
-
-# Tests de integración
-bun test:integration
-
-# Tests end-to-end
-bun test:e2e
-
-# Coverage de código
-bun test:coverage
-```
-
-### Estructura de Testing
-
-```
-tests/
-├── 📁 unit/            # Tests unitarios
-├── 📁 integration/     # Tests de integración
-├── 📁 e2e/            # Tests end-to-end
-└── 📁 __mocks__/      # Mocks y fixtures
-```
-
-## 🚀 Despliegue
-
-### Vercel (Recomendado)
-
-```bash
-# Instalar Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-
-# Deploy de producción
-vercel --prod
-```
-
-### Docker
-
-```dockerfile
-# Dockerfile incluido para containerización
-FROM node:18-alpine
-
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-
-COPY . .
-RUN npm run build
-
-EXPOSE 3000
-CMD ["npm", "start"]
-```
-
-### Variables de Entorno para Producción
-
-```env
-# Configurar en tu plataforma de deployment
-MONGODB_URI=mongodb+srv://...
-NEXTAUTH_URL=https://tu-dominio.com
-NEXTAUTH_SECRET=production-secret
-# ... resto de variables
-```
-
 ## 👥 Contribución
 
 ### Guía de Contribución
@@ -610,7 +563,7 @@ NEXTAUTH_SECRET=production-secret
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia Mozilla Public License Version 2.0. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
